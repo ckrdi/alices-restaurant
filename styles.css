@@ -60,6 +60,7 @@ body {
 }
 
 .Testimonial {
+	display: inline-block;
 	margin: 2em 0;
 	padding: 1em;
 }
@@ -84,35 +85,52 @@ body {
 
 .Information div {
 	width: 30%;
-	display: inline-block;
+	display: inline-table;
 }
 
-.Contact {
-	padding: 3em;
-	text-align: initial;
+* {
+  box-sizing: border-box;
 }
 
-.Contact input,
-.Contact textarea {
-	border: 3px solid black;
-	margin: .5em;
+.contact__right {
+  background-color: white;
 }
 
-.Contact div {
-	margin: 0 auto;
-	width: 40%;
+.contact__form {
+  padding: 15px 95px;
+	margin-bottom: 25px;
+  width: 100%;
+  color: black;
 }
 
+.contact__form>div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+	margin-left: 20em;
+	margin-right: 20em;
+}
+
+.contact__form-input,
+.contact__form-textarea {
+  width: 300px;
+  height: 40px;
+  background: transparent;
+  border: 3px solid black;
+  border-radius: 2px;
+}
+
+.contact__form-textarea {
+  height: 150px;
+}
+
+label[for="message"].contact__form-label {
+  align-self: flex-start;
+}
 
 footer {
 	padding: 1em;
 	font-size: 2em;
 	text-transform: uppercase;
-}
-
-
-label {
-    width:180px;
-    text-align:right;
-    padding-right:10px;
 }
